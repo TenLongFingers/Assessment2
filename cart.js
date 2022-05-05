@@ -7,7 +7,6 @@
     creating customer objects.  
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Below is a cart array that has food objects
@@ -19,25 +18,27 @@
 */
 
 const cart = [
-    {
-        name: 'pizza', 
-        price: 9.99
-    }, 
-    {
-        name: 'pasta', 
-        price: 8.99
-    }, 
-    {
-        name: 'salad', 
-        price: 7.99
-    }
-]
+  {
+    name: "pizza",
+    price: 9.99,
+  },
+  {
+    name: "pasta",
+    price: 8.99,
+  },
+  {
+    name: "salad",
+    price: 7.99,
+  },
+];
 
-//CODE HERE
+const priceOnly = (arr) =>
+  arr.map((element) => {
+    return element.price;
+  });
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
-
+const summedPrice = cart.reduce(priceOnly);
+console.log(summedPrice);
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that
@@ -54,8 +55,6 @@ const cart = [
 */
 
 //CODE HERE
-
-
 
 //////////////////PROBLEM 3////////////////////
 /*  
