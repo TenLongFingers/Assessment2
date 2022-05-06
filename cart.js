@@ -32,13 +32,13 @@ const cart = [
   },
 ];
 
-const priceOnly = (arr) =>
-  arr.map((element) => {
-    return element.price;
-  });
+const priceOnly = (obj) => obj.price;
 
-const summedPrice = cart.reduce(priceOnly);
+const summedPrice = cart.reduce((accumulator, currentValue) => {
+  return accumulator + priceOnly(currentValue);
+}, 0);
 console.log(summedPrice);
+
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that
@@ -54,7 +54,14 @@ console.log(summedPrice);
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
+//tax = cartTotal * (1 + tax)
+
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+  return cartTotal * (1 + tax) - couponValue;
+};
+const checkoutTotal = calcFinalPrice(summedPrice, 5, 0.06);
+
+console.log(checkoutTotal);
 
 //////////////////PROBLEM 3////////////////////
 /*  
