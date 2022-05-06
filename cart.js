@@ -82,9 +82,21 @@ console.log(checkoutTotal);
 
     Your object should have at least 4 properties. 
 */
-
+class Customer {
+  constructor(custID, firstName, lastName, birthday, email, phone) {
+    this.custID = custID;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.birthday = birthday;
+    this.email = email;
+    this.phone = phone;
+  }
+}
 /*
-    TEXT ANSWER HERE
+    A customer ID will help us with a database. It makes it easy to code.
+    We need identifying information like name. We'll want their birthday so we can send them birthday deals, and so we know if they can legally order alcohol.
+    We need their email address so we can add them to a mailing list and send deals. We'll want their phone number so we can call or text them when their table is ready.
+
 
 */
 
@@ -92,5 +104,12 @@ console.log(checkoutTotal);
     Now, create a customer object following your own
     guidelines.
 */
-
+let A731 = newCustomer(
+  `A731`,
+  `Amity`,
+  `Blight`,
+  `10/12/2001`,
+  `ablight@blightindustries.org`,
+  `9094390116`
+);
 //CODE HERE
