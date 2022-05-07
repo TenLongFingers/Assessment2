@@ -104,8 +104,8 @@ class Customer {
     Now, create a customer object following your own
     guidelines.
 */
-let A731 = newCustomer(
-  `A731`,
+let pGLr = newCustomer(
+  `pGLr`,
   `Amity`,
   `Blight`,
   `10/12/2001`,
